@@ -1,9 +1,9 @@
 import app from "./app.js";
-import dbConnect from "./db.js";
+import mongoose from "mongoose";
 
 const mongoDB_URL = process.env.NODE_MONGODB;
 
-dbConnect(mongoDB_URL)
+mongoose.connect(mongoDB_URL, { useNewUrlParser: true })
     .then(()=>{
         console.log(`Connected to MongoDB`);
 
