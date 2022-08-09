@@ -1,6 +1,6 @@
 import categoryModel from "../models/categoryModel.js";
 
-const index = async (req, res) => {
+const index = (req, res) => {
     // get all
     categoryModel.find({})
         .then((categories) => {
