@@ -1,0 +1,26 @@
+{
+  "name": "dan0de",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./server/server.js",
+  "type": "module",
+  "scripts": {
+    "start:dev": "nodemon ./server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fredrikspannar/dan0de.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fredrikspannar/dan0de/issues"
+  },
+  "homepage": "https://github.com/fredrikspannar/dan0de#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
