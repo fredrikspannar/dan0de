@@ -6,7 +6,7 @@ const mongoDB_URL = process.env.NODE_MONGODB;
 dbConnect(mongoDB_URL)
     .then(()=>{
         console.log(`Connected to MongoDB`);
-        
+
         // get port env and start
         const PORT = process.env.NODE_PORT || 8000;
 
@@ -17,7 +17,7 @@ dbConnect(mongoDB_URL)
 
     })
     .catch((err) => {
-        consolelog('Failed to connect to MongoDB: ',err);
+        console.log('Failed to connect to MongoDB: ',err);
         process.exit(1);
     });
 

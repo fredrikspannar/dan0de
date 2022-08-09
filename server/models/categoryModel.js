@@ -1,11 +1,11 @@
-import { Schema, model } from "mongoose";
+import mongoose from "mongoose";
 
-const categorySchema = new Schema({
+const categorySchema = new mongoose.Schema({
     title: String,
     slug: String,
     createdAt: Date,
     updatedAt: Date
 });
 
-const Category = model('Category', categorySchema);
+const Category = mongoose.model('Category', categorySchema);
 export default Category;

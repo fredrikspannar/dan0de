@@ -2,12 +2,15 @@ import express from "express";
 import categoryRoutes from "./routes/categoryRoutes.js";
 import trek from 'trek-quotes';
 
-
 const app = express();
-const mongoUrl = process.env.NODE_MONGODB;
 
+// middleware
+if ( process.env.NODE_ENV == "production" ) {
+    // use gzip compression middleware
+    const compression = require('compression');
+    app.use(compression());
 
-
+}
 
 // routes
 app.use('/category', categoryRoutes);
