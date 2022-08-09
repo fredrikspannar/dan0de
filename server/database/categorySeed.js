@@ -2,15 +2,11 @@ import slugify from "slugify";
 
 export const categoriesSeed = [
     {
-        title: "server",
-        slug: slugify("server"),
-        createdAt: new Date(),
-        updatedAt: new Date()
+        title: "Server",
+        slug: slugify("server")
     },
     {
         title: "Cloud",
-        slug: slugify("cloud"),
-        createdAt: new Date(),
-        updatedAt: new Date()
+        slug: slugify("cloud")
     }      
 ];
