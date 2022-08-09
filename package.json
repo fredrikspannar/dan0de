@@ -2,8 +2,8 @@
   "name": "dan0de",
   "version": "0.0.1",
   "description": "",
-  "main": "./server/server.js",
   "type": "module",
+  "main": "./server/server.js",
   "scripts": {
     "start:dev": "nodemon ./server/server.js"
   },
@@ -19,6 +19,8 @@
   "homepage": "https://github.com/fredrikspannar/dan0de#readme",
   "dependencies": {
     "express": "^4.18.1",
+    "mongodb": "^4.8.1",
+    "mongoose": "^6.5.1",
     "trek-quotes": "^1.1.1"
   },
   "devDependencies": {

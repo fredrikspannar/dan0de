@@ -1,9 +1,23 @@
-// imports server-app from module
-import app from "./app.js"
+import app from "./app.js";
+import dbConnect from "./db.js";
 
-// get port env and start
-const PORT = process.env.NODE_PORT || 8000;
+const mongoDB_URL = process.env.NODE_MONGODB;
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+dbConnect(mongoDB_URL)
+    .then(()=>{
+        console.log(`Connected to MongoDB`);
+        
+        // get port env and start
+        const PORT = process.env.NODE_PORT || 8000;
+
+        // start server
+        app.listen(PORT, () => {
+            console.log(`Server is running on port ${PORT}`);
+        });
+
+    })
+    .catch((err) => {
+        consolelog('Failed to connect to MongoDB: ',err);
+        process.exit(1);
+    });
+

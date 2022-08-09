@@ -2,7 +2,11 @@ import express from "express";
 import categoryRoutes from "./routes/categoryRoutes.js";
 import trek from 'trek-quotes';
 
+
 const app = express();
+const mongoUrl = process.env.NODE_MONGODB;
+
+
 
 
 // routes
