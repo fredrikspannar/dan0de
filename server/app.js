@@ -1,6 +1,9 @@
 import express from "express";
-import categoryRoutes from "./routes/categoryRoutes.js";
+import bodyParser from "body-parser";
+import helmet from "helmet";
 import trek from 'trek-quotes';
+
+import categoryRoutes from "./routes/categoryRoutes.js";
 
 const app = express();
 
@@ -11,6 +14,11 @@ if ( process.env.NODE_ENV == "production" ) {
     app.use(compression());
 
 }
+
+app.use(helmet()); // security headers
+
+app.use(bodyParser.json());  // form data
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // routes
 app.use('/category', categoryRoutes);

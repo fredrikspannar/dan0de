@@ -16,17 +16,17 @@ const categorySchema = new mongoose.Schema({
 });
 
 // middleware on save(create) and update
-categorySchema.pre('save', (category, next) => {
+/*categorySchema.pre('save', (next) => {
 
     // update the date every time a blog post is saved
-    category.updatedAt = Date.now(); 
+   // this.updated = Date.now(); 
 
     // update slug from title
-    category.slug = slugify(category.title.toLowerCase());
+    this.slug = slugify(this.title.toLowerCase());
 
     // continue..
     next();
-});
+});*/
 
 const Category = mongoose.model('Category', categorySchema);
 export default Category;
